@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vít Kubát, www.kubat.it">
+    <meta name="description" content="Kontaktní informace Digitální brána">
+    <meta name="keywords" content="vzdělávání, školení, kurzy, aktuality, Digitální brána, kontakt">
+
+    <title>Kontakt | Digitální brána</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/x-icon" href="img/digibrana.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">Co jsme si neřekli</a>
+            <button class="hamburger" aria-label="Menu">
+                <svg width="24" height="24" stroke="currentColor" fill="none">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="aktuality.html">Aktuality</a></li>
+                    <li><a href="onas.html">O nás 1</a></li>
+                    <li><a href="onas2.html">O nás 2</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Jak nás můžete kontaktovat?</h1>
+            <p>Jsme tu pro vás. Neváhejte se na nás obrátit s jakýmkoli dotazem.</p>
+        </section>
+
+        <section class="contact-info">
+            <h2>Kontaktní údaje</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    <p>+420 777 777 777</p>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                        </path>
+                        <polyline points="22,6 12,13 2,6">
+                        </polyline>
+                    </svg>
+                    <p>asiemail@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Roof -->
+                        <polygon points="3,8 12,2 21,8" />
+                        
+                        <!-- Columns -->
+                        <line x1="6" y1="10" x2="6" y2="18" />
+                        <line x1="12" y1="10" x2="12" y2="18" />
+                        <line x1="18" y1="10" x2="18" y2="18" />
+                    
+                        <!-- Base -->
+                        <rect x="4" y="18" width="16" height="2" />
+                    </svg>
+                    <p>Bankovní účtík? 👀</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Napište nám</h2>
+            <form action="send_email.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Jméno:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Zpráva:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="button">Odeslat zprávu</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Nějakej copyright, jak budeš chtít :D</p>
+            <p>Kontakt: asi.email@gmail.com, +420 777 777 777</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
