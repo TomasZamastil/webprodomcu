@@ -31,6 +31,11 @@ h1{
     font-size: 2.9rem;
 }
 
+h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -49,7 +54,7 @@ nav ul {
 }
 
 nav a {
-    color: black;
+    color: var(--primary-color);
     text-decoration: none;
     padding: 0.5rem;
     transition: color 0.3s ease;
@@ -94,6 +99,7 @@ article {
 }
 
 h2 {
+    font-size: 2rem;
     color: var(--text-color);
     margin-bottom: 1rem;
 }
@@ -103,13 +109,27 @@ p {
 }
 
 /* hero */
-.hero {
+.hero1 {
     max-width: 100%;
     display: flex;
-    justify-content: center;
     padding: 2rem 0 0 0;
 }
 
+.hero2 {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10rem;
+
+}
+
+.hero-superclass{
+    display: flex;
+    margin-top: 50px;
+    gap: 5rem;
+}
 
 
 .hero-content {
@@ -137,7 +157,6 @@ p {
 
 .hero-text {
     margin: 0;
-    text-align: center;
 }
 
 
@@ -148,9 +167,9 @@ p {
 }
 
 .hero-buttons .button {
+    background-color: var(--primary-color);
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background-color: var(--secondary-color);
     color: black;
     text-decoration: none;
     border-radius: 16px;
@@ -167,36 +186,34 @@ p {
 }
 
 .rozcestnikBackground {
-    background-image: url('pozadí.jpeg');
-    margin: 0;
+    margin-top: 200px ;
     width: 100%;
     height: 100%;
 }
 
 /* features */
 .features {
-    margin: 2rem 0;
+    margin: 4rem 0;
     text-align: center;
 }
 
 .features ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .features li {
+    background-image: url(utrženej\ papír\ copy.png);
+    background-repeat: no-repeat;
     flex: 1;
-    padding: 1.5rem;
-    background-color: var(--secondary-color);
+    padding: 3rem;
     color: black;
-    border-radius: 16px;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 5rem;
 }
 
 /* index courses*/
@@ -544,6 +561,10 @@ option {
     padding: 1rem;
 }
 
+.pozadi-rozcestnik {
+    background-image: url(utrženej\ papír\ copy.png);
+}
+
 /* mobile */
 @media (max-width: 768px) {
     nav ul {
@@ -589,6 +610,7 @@ option {
 
     .hero-buttons {
         justify-content: center;
+        
     }
 
     .footer-content {
