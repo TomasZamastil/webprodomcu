@@ -562,7 +562,9 @@ option {
 }
 
 .pozadi-rozcestnik {
-    background-image: url(utrženej\ papír\ copy.png);
+    background-image: url("utrženej papír copy.png");
+    min-width: 100%;
+    min-height: 100%;
 }
 
 /* mobile */
