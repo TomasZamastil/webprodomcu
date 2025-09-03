@@ -14,7 +14,7 @@
 }
 
 nav a:hover {
-    color: var(--background-color);
+    color: #0066cc;
 }
 
 /* Responsive video embed */
