@@ -812,6 +812,14 @@ body {
   object-fit: contain;
 }
 
+/* rounded corners for tile images */
+.tile img {
+  border-radius: 12px;
+}
+.tile-with-text img {
+  border-radius: 12px;
+}
+
 /* Popisek přes obrázek (volitelné) */
 .caption {
   position: absolute;
@@ -838,7 +846,6 @@ body {
     --_items: 12;
     all: unset;
     aspect-ratio: 1 / 1;
-    container-type: inline-size;
     direction: ltr;
     display: grid;
     position: relative;
@@ -910,7 +917,7 @@ body {
 
 /* spacing before Rozcestník on homepage */
 .rozcestnik-section {
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 /* center Rozcestník heading */
@@ -942,4 +949,21 @@ body {
 .tile-with-text p {
   margin: 0 12px;
   font-size: 0.95rem;
+}
+
+/* invisible big text that shows only on selection */
+.invisible-watermark {
+    user-select: text;
+    font-size: clamp(64px, 12vw, 220px);
+    font-weight: 800;
+    line-height: 1;
+    text-align: center;
+    color: transparent;
+    margin: 2rem 0;
+    height: auto;
+    overflow: visible;
+}
+.invisible-watermark::selection {
+    background: var(--primary-color);
+    color: black;
 }
