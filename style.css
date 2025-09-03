@@ -1094,3 +1094,19 @@ body {
     background: var(--primary-color);
     color: black;
 }
+
+/* Responsive YouTube video */
+iframe[src*="youtube"] {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden;
+}
