@@ -786,6 +786,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
+  color: black;
   outline-offset: 4px;
   transition: transform .18s ease, box-shadow .18s ease;
   box-shadow: 0 2px 12px rgba(0,0,0,.05);
@@ -796,12 +797,19 @@ body {
   box-shadow: 0 6px 24px rgba(0,0,0,.12);
 }
 
+/* widen yellow border and keep original image ratio in tiles */
+.tile {
+  background-color: var(--secondary-color);
+  padding: 16px 16px 20px;
+}
 .tile img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
   display: block;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 4 / 3;        /* jednotná výška dlaždic */
-  object-fit: cover;
+  margin: 0 auto;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 /* Popisek přes obrázek (volitelné) */
@@ -899,3 +907,39 @@ body {
 :where(.ui-wheel-of-fortune) ul li:nth-of-type(10) { --_idx: 10; }
 :where(.ui-wheel-of-fortune) ul li:nth-of-type(11) { --_idx: 11; }
 :where(.ui-wheel-of-fortune) ul li:nth-of-type(12) { --_idx: 12; }
+
+/* spacing before Rozcestník on homepage */
+.rozcestnik-section {
+    margin-top: 10rem;
+}
+
+/* center Rozcestník heading */
+.rozcestnik-section h2 {
+    text-align: center;
+}
+
+/* tile variant with centered text */
+.tile-with-text {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  align-items: start;
+  justify-items: center;
+  text-align: center;
+  gap: 8px;
+  padding-bottom: 12px;
+}
+.tile-with-text img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.tile-with-text h2 {
+  margin: 8px 12px 0 12px;
+  font-size: 1.1rem;
+}
+.tile-with-text p {
+  margin: 0 12px;
+  font-size: 0.95rem;
+}
