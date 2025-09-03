@@ -745,6 +745,133 @@ option {
     }
 }
 
+/* Responsive breakpoints - Mobile First approach */
+/* Extra small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    .header-content {
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .hlavni_nadpis h2 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-superclass {
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .hero1, .hero2 {
+        padding: 1rem 0;
+    }
+    
+    .wrapper {
+        padding: 16px;
+    }
+    
+    .rozcestnik-gallery {
+        gap: 12px;
+    }
+    
+    .contact-details {
+        gap: 1rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header-content {
+        padding: 0.8rem;
+    }
+    
+    .hero-superclass {
+        gap: 2.5rem;
+    }
+    
+    .wrapper {
+        padding: 20px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-superclass {
+        gap: 3rem;
+    }
+    
+    .wrapper {
+        padding: 24px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-superclass {
+        gap: 3.5rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero-superclass {
+        gap: 4rem;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .tile img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header, .footer, .hamburger, .invisible-watermark {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .tile {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+    .header-content {
+        padding: 0.5rem;
+    }
+    
+    .hlavni_nadpis {
+        padding-top: 15px;
+    }
+    
+    .hero-superclass {
+        margin-top: 2rem;
+    }
+}
+
 /* Základní reset/utility */
 body {
   margin: 0;
