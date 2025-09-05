@@ -1,3 +1,15 @@
+#quote-generator .spinner {
+    width: 36px;
+    height: 36px;
+    border: 4px solid rgba(0,0,0,0.15);
+    border-top-color: #2399b2;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
 /* Theme variables */
 :root {
     --primary-color: #fae415;
@@ -271,6 +283,40 @@ p {
 .hero-buttons .button:hover {
     background-color: var(--accent-color);
     transform: translateY(-3px);
+}
+
+/* prettier button for quote generator */
+#quote-generator .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.85rem 1.4rem;
+    border-radius: 9999px;
+    border: 2px solid rgba(0,0,0,0.08);
+    background: linear-gradient(180deg, #7fd6e0, #2aa9c3); /* shades of site blue */
+    color: black;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease, filter .18s ease;
+}
+
+#quote-generator .button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(180deg, #9ae0e7, #2399b2);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+}
+
+#quote-generator .button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.22);
+    background: linear-gradient(180deg, #6ccbd6, #1f8da5);
+}
+
+#quote-generator .button:focus-visible {
+    outline: 3px solid black;
+    outline-offset: 3px;
 }
 
 .rozcestnikBackground {
