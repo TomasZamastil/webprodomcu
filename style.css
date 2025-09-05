@@ -1178,11 +1178,44 @@ body {
     color: black;
 }
 
+/* scoped styles for photos on O projektu page */
+.oprojektu-photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.oprojektu-photos img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+
+@media (max-width: 768px) {
+    .oprojektu-photos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /* Responsive YouTube video */
 iframe[src*="youtube"] {
     max-width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+}
+
+/* center top text on slova page */
+#quote-generator > h2,
+#quote-generator > p {
+    text-align: center;
+}
+
+/* add extra space before subsequent section headings on slova page */
+#quote-generator > h2:not(:first-of-type) {
+    margin-top: 5rem;
 }
 
 /* videos grid on slova page */
