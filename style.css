@@ -286,7 +286,7 @@ p {
 }
 
 /* prettier button for quote generator */
-#quote-generator .button {
+#quote-generator .article-right .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -302,19 +302,19 @@ p {
     transition: transform .18s ease, box-shadow .18s ease, background .18s ease, filter .18s ease;
 }
 
-#quote-generator .button:hover {
+#quote-generator .article-right .button:hover {
     transform: translateY(-2px);
     background: linear-gradient(180deg, #9ae0e7, #2399b2);
     box-shadow: 0 12px 28px rgba(0,0,0,0.28);
 }
 
-#quote-generator .button:active {
+#quote-generator .article-right .button:active {
     transform: translateY(0);
     box-shadow: 0 6px 16px rgba(0,0,0,0.22);
     background: linear-gradient(180deg, #6ccbd6, #1f8da5);
 }
 
-#quote-generator .button:focus-visible {
+#quote-generator .article-right .button:focus-visible {
     outline: 3px solid black;
     outline-offset: 3px;
 }
@@ -1183,6 +1183,20 @@ iframe[src*="youtube"] {
     max-width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+}
+
+/* videos grid on slova page */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 16px 0 24px 0;
+}
+
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Prevent horizontal scrolling */
