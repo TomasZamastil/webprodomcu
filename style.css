@@ -1484,6 +1484,7 @@ iframe[src*="youtube"] {
 @media (max-width: 768px) {
     .videos-grid {
         grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
 
