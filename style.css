@@ -644,11 +644,12 @@ option {
 /* contact form */
 .contact-form {
     max-width: 600px;
-    margin: 3rem 0;
+    margin: 3rem 0 !important;
     padding: 2rem;
     background-color: var(--background-color);
     border-radius: 16px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: left !important;
 }
 
 .contact-form h2 {
