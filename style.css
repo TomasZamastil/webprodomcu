@@ -156,6 +156,10 @@ nav a:hover {
     width: 100%;
     max-width: 100%;
     aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
 }
 .video-embed iframe {
     position: absolute;
@@ -163,6 +167,31 @@ nav a:hover {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* Mobile-specific video adjustments */
+@media (max-width: 768px) {
+    .video-embed {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+}
+
+/* Very small screens - reduce video size */
+@media (max-width: 480px) {
+    .video-embed {
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* Extra small screens - ensure video fits */
+@media (max-width: 360px) {
+    .video-embed {
+        max-width: 100%;
+        margin: 0;
+    }
 }
 
 html, body {
@@ -1471,15 +1500,7 @@ body {
 
 /* remove composed variants (not used) */
 
-/* Responsive YouTube video */
-iframe[src*="youtube"] {
-    width: 500px;
-    height: 281px;
-    border-radius: 12px;
-    display: block;
-    overflow: hidden;
-    margin: 0 auto;
-}
+/* Responsive YouTube video - now handled by .video-embed class */
 
 /* center top text on slova page */
 #quote-generator > h2 {
