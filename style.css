@@ -644,7 +644,7 @@ option {
 /* contact form */
 .contact-form {
     max-width: 600px;
-    margin: 3rem auto;
+    margin: 3rem 0;
     padding: 2rem;
     background-color: var(--background-color);
     border-radius: 16px;
