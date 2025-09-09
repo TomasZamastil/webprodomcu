@@ -1546,6 +1546,23 @@ iframe[src*="youtube"] {
     }
 }
 
+@media (max-width: 768px) {
+  .hero-superclass {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hero1,
+  .hero2 {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 /* Prevent horizontal scrolling and ensure all grids stay within viewport */
 body {
     overflow-x: hidden;
