@@ -1,3 +1,90 @@
+.oprojektu-photos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 24px;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.oprojektu-photos-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+
+/* two stacked columns layout */
+.oprojektu-photos-composed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 1rem 0 1.5rem 0;
+}
+.oprojektu-photos-composed .column {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 16px;
+}
+.oprojektu-photos-composed img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+@media (max-width: 768px) {
+    .oprojektu-photos-composed {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .oprojektu-photos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop placement for four photos on O Projektu */
+@media (min-width: 1100px) {
+    .oprojektu-photos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "img1 img3 img4"
+            "img2 img3 img4";
+        align-items: start;
+        gap: 20px;
+    }
+    .oprojektu-photos-grid img:nth-child(1) { grid-area: img1; }
+    .oprojektu-photos-grid img:nth-child(2) { grid-area: img2; }
+    .oprojektu-photos-grid img:nth-child(3) { grid-area: img3; }
+    .oprojektu-photos-grid img:nth-child(4) { grid-area: img4; }
+}
+.oprojektu-photos-composed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.oprojektu-photos-composed .column {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 16px;
+}
+
+.oprojektu-photos-composed img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+
+@media (max-width: 768px) {
+    .oprojektu-photos-composed {
+        grid-template-columns: 1fr;
+    }
+}
 #quote-generator .spinner {
     width: 36px;
     height: 36px;
@@ -34,9 +121,9 @@ img {
 
 /* Force images on O projektu page to obey viewport width, override inline styles */
 .page-oprojektu img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 nav a:hover {
@@ -1194,11 +1281,18 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .oprojektu-photos {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+@media (max-width: 576px) {
+    .oprojektu-photos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* remove composed variants (not used) */
 
 /* Responsive YouTube video */
 iframe[src*="youtube"] {
