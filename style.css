@@ -441,7 +441,7 @@ p {
 }
 
 .features li {
-    background-image: url(utrženej\ papír\ copy.png);
+    background-image: url(images/ui/utrženej\ papír\ copy.png);
     background-repeat: no-repeat;
     flex: 1;
     padding: 3rem;
@@ -798,7 +798,7 @@ option {
 }
 
 .pozadi-rozcestnik {
-    background-image: url("utrženej papír copy.png");
+    background-image: url("images/ui/utrženej papír copy.png");
     min-width: 100%;
     min-height: 100%;
 }
