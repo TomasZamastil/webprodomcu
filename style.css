@@ -141,6 +141,11 @@ img {
     max-width: 100%;
 }
 
+/* Add more space above main heading on O projektu page */
+.page-oprojektu main h2:first-child {
+    margin-top: 2rem;
+}
+
 nav a:hover {
     color: #0066cc;
 }
