@@ -101,7 +101,7 @@
 :root {
     --primary-color: #fae415;
     --secondary-color: #fae415;
-    --accent-color: #e74c3c;
+    --accent-color: #ae9d02;
     --text-color: black;
     --background-color: #58c1d4;
 }
@@ -159,6 +159,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-size: 17px; /* slightly larger base text */
 }
 
 /* lock body scroll when mobile menu is open */
@@ -297,6 +298,19 @@ main {
     padding-right: 1rem;
 }
 
+/* kontakt */
+.contact-info {
+    margin: 2rem 0;
+    background-color: var(--background-color);
+}
+
+/* left-align content on contact page */
+body:has(.support-grid) main {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: left;
+}
+
 article {
     margin-bottom: 2rem;
 }
@@ -315,7 +329,8 @@ p {
 .hero1 {
     max-width: 100%;
     display: flex;
-    padding: 2rem 0 0 0;
+    padding: 0;
+    margin-top: -6px; /* nudge up a few px to align with video */
 }
 
 .hero2 {
@@ -522,6 +537,7 @@ footer {
     grid-template-columns: 2fr 1fr; /* main content + side image */
     gap: 24px;
     align-items: start;
+    margin-top: 2.5rem; /* push content further from navbar */
 }
 
 .support-content img {
@@ -529,13 +545,18 @@ footer {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    display: block;
+    margin: 8px auto 0 auto; /* center under text */
 }
 
 .support-side img {
     width: 100%;
+    max-width: 320px; /* slightly smaller */
     height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    margin: 0 auto;
+    display: block;
 }
 
 @media (max-width: 992px) {
@@ -555,14 +576,14 @@ footer {
 
 .contact-details {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 1.5rem;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .contact-item {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -837,8 +858,19 @@ option {
 .hlavni_nadpis {
     padding-top: 25px;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1000px;
     text-align: center;
+}
+
+.yellow-box {
+    background-color: var(--secondary-color);
+    color: black;
+    border-radius: 16px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.25rem;
+    display: inline-block;
+    text-align: left;
+    margin-top: 0.5rem;
 }
 
 /* mobile */
@@ -1263,7 +1295,8 @@ body {
 
 /* spacing before Rozcestník on homepage */
 .rozcestnik-section {
-    margin-top: 8rem;
+    margin-top: 3rem; /* reduce gap above Rozcestník */
+    margin-bottom: 4rem; /* add breathing room above footer */
 }
 
 /* center Rozcestník heading */
@@ -1348,17 +1381,42 @@ iframe[src*="youtube"] {
     max-width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    display: block;
+    overflow: hidden;
 }
 
 /* center top text on slova page */
-#quote-generator > h2,
-#quote-generator > p {
+#quote-generator > h2 {
     text-align: center;
 }
 
+#quote-generator > p {
+    text-align: left;
+}
+
+/* Center text under "PŘIJDE ČAS" heading */
+.center-text {
+    text-align: center;
+}
+
+/* Only the first heading left-aligned */
+#quote-generator > h2:first-of-type {
+    text-align: left;
+}
+
+/* Narrow only the intro text block on Slova page */
+/* (reverted) */
+
+
 /* add extra space before subsequent section headings on slova page */
 #quote-generator > h2:not(:first-of-type) {
-    margin-top: 5rem;
+    margin-top: 7rem;
+}
+
+/* remove bottom margin from headings on slova page */
+#quote-generator > h2 {
+    margin-bottom: 0;
 }
 
 /* videos grid on slova page */

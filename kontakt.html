@@ -41,50 +41,43 @@
     </header>
 
     <main>
-        <section class="hero-text">
-            <h1>Jak nás můžete kontaktovat?</h1>
-            <p>Jsme tu pro vás. Neváhejte se na nás obrátit s jakýmkoli dotazem.</p>
-        </section>
-
-        <section class="contact-info">
-            <h2>Kontaktní údaje</h2>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                        </path>
-                        <polyline points="22,6 12,13 2,6">
-                        </polyline>
-                    </svg>
-                    <p><a href="mailto:projektnadeje@email.cz">projektnadeje@email.cz</a></p>
+        <div class="support-grid">
+            <div class="support-content">
+                <h2>Jak nás můžete kontaktovat?</h2>
+                <p>Jsme tu pro vás. Neváhejte se na nás obrátit s jakýmkoli dotazem.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6">
+                            </polyline>
+                        </svg>
+                        <p><a href="mailto:projektnadeje@email.cz">projektnadeje@email.cz</a></p>
+                    </div>
                 </div>
                 
-            </div>
-        </section>
-        <section class="article">
-            <img style="max-width: 40%; " src="images/social/instacnadeje.jpeg" alt="instacnadeje">
-        </section>
-        
-<!-- Write your comments here
-        <section class="contact-form">
+                <section class="contact-form">
             <h2>Napište nám</h2>
-            <form action="send_email.php" method="POST">
+            <form id="contactForm">
                 <div class="form-group">
-                    <label for="name">Jméno:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
+                    <label for="email">Váš e-mail:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Zpráva:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Váš dotaz:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="button">Odeslat zprávu</button>
             </form>
         </section>
-        -->
+            </div>
+            <div class="support-side">
+                <img src="img_0926.png" alt="Behind the scenes">
+                <p style="margin-top: 8px; text-align: center; opacity: .9;">Naleznete zde behind the scenes z natáčení, aktuality, ale i obsah o duševním zdraví</p>
+            </div>
+        </div>
 
     </main>
 

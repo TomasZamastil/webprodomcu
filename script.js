@@ -126,3 +126,28 @@ window.addEventListener('resize', () => {
         initQuoteGenerator();
     }
 })();
+
+// Contact form functionality
+(function() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link with pre-filled content
+            const subject = 'Dotaz z webu Projekt Naděje';
+            const body = `E-mail odesílatele: ${email}\n\nDotaz:\n${message}`;
+            
+            const mailtoLink = `mailto:projektnadeje@email.cz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open mailto link
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Formulář byl odeslán! Otevře se vám e-mailový klient s předvyplněnou zprávou.');
+        });
+    }
+})();
