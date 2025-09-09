@@ -1027,6 +1027,14 @@ option {
     }
 }
 
+/* Earlier breakpoint for video responsiveness */
+@media (max-width: 1200px) {
+    .hero-superclass{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
 /* Responsive breakpoints - Mobile First approach */
 /* Extra small devices (phones, 576px and down) */
 @media (max-width: 575.98px) {
@@ -1465,10 +1473,8 @@ body {
 
 /* Responsive YouTube video */
 iframe[src*="youtube"] {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    width: 500px;
+    height: 281px;
     border-radius: 12px;
     display: block;
     overflow: hidden;
