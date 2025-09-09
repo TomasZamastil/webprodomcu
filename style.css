@@ -516,6 +516,37 @@ footer {
     background-color: var(--background-color);
 }
 
+/* support page layout */
+.support-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* main content + side image */
+    gap: 24px;
+    align-items: start;
+}
+
+.support-content img {
+    max-width: 260px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+
+.support-side img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+
+@media (max-width: 992px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+    .support-content img {
+        max-width: 220px;
+    }
+}
+
 .contact-info h2 {
     text-align: center;
     margin-bottom: 2rem;
