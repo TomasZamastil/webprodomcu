@@ -154,9 +154,9 @@ nav a:hover {
 .video-embed {
     position: relative;
     width: 100%;
-    max-width: 100%;
+    max-width: 500px; /* Omezíme maximální šířku videa */
     aspect-ratio: 16 / 9;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto; /* Přidáme spodní margin pro tlačítko */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
@@ -172,8 +172,8 @@ nav a:hover {
 /* Mobile-specific video adjustments */
 @media (max-width: 768px) {
     .video-embed {
-        max-width: 100%;
-        margin: 0 auto;
+        max-width: 90%; /* Menší na tabletech */
+        margin: 0 auto 1.5rem auto;
         border-radius: 8px;
     }
 }
@@ -181,7 +181,8 @@ nav a:hover {
 /* Very small screens - reduce video size */
 @media (max-width: 480px) {
     .video-embed {
-        max-width: 100%;
+        max-width: 85%; /* Ještě menší na malých telefonech */
+        margin: 0 auto 1rem auto;
         aspect-ratio: 16 / 9;
     }
 }
@@ -189,8 +190,8 @@ nav a:hover {
 /* Extra small screens - ensure video fits */
 @media (max-width: 360px) {
     .video-embed {
-        max-width: 100%;
-        margin: 0;
+        max-width: 80%; /* Nejmenší na velmi malých obrazovkách */
+        margin: 0 auto 1rem auto;
     }
 }
 
@@ -390,7 +391,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem; /* Zmenšíme gap mezi videem a tlačítkem */
     width: 100%;
 }
 
