@@ -7,7 +7,10 @@ const navList = nav ? nav.querySelector('ul') : null;
 hamburger.addEventListener('click', () => {
     // compute header height first to avoid flicker/gap
     const headerHeight = headerEl ? headerEl.getBoundingClientRect().height : 0;
-    if (navList) navList.style.top = `${headerHeight}px`;
+    if (navList) {
+        navList.style.top = `${headerHeight}px`;
+        navList.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+    }
 
     nav.classList.toggle('active');
 
@@ -16,7 +19,7 @@ hamburger.addEventListener('click', () => {
         body.classList.add('menu-open');
     } else {
         body.classList.remove('menu-open');
-        if (navList) navList.style.top = '';
+        if (navList) { navList.style.top = ''; navList.style.maxHeight = ''; }
     }
 });
 
@@ -25,7 +28,7 @@ document.addEventListener('click', (e) => {
     if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
         nav.classList.remove('active');
         body.classList.remove('menu-open');
-        if (navList) navList.style.top = '';
+        if (navList) { navList.style.top = ''; navList.style.maxHeight = ''; }
     }
 });
 
@@ -34,8 +37,18 @@ nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
         nav.classList.remove('active');
         body.classList.remove('menu-open');
-        if (navList) navList.style.top = '';
+        if (navList) { navList.style.top = ''; navList.style.maxHeight = ''; }
     });
+});
+
+// Recompute on resize (orientation change)
+window.addEventListener('resize', () => {
+    if (!nav.classList.contains('active')) return;
+    const headerHeight = headerEl ? headerEl.getBoundingClientRect().height : 0;
+    if (navList) {
+    	navList.style.top = `${headerHeight}px`;
+    	navList.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+    }
 });
 
 // === Quote generator (slova.html) ===
