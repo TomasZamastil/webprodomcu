@@ -12,17 +12,26 @@
     margin: 1rem 0 1.5rem 0 !important;
 }
 
-.oprojektu-photos-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,.18);
+/* Responsive breakpoints for two-columns grid */
+@media (max-width: 768px) {
+    .oprojektu-photos-grid-two-columns {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+    
+    .oprojektu-photos-grid-two-columns img {
+        min-height: 120px; /* Menší minimální výška na mobilech */
+        max-height: 200px; /* Menší maximální výška na mobilech */
+    }
 }
 
+.oprojektu-photos-grid img,
 .oprojektu-photos-grid-two-columns img {
     width: 100%;
-    height: auto;
+    height: auto; /* Automatická výška podle poměru stran */
+    min-height: 150px; /* Minimální výška */
+    max-height: 250px; /* Maximální výška */
+    object-fit: cover; /* Ořízne obrázek, aby vyplnil prostor */
     display: block;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
@@ -53,9 +62,25 @@
     }
 }
 
+/* Tablet breakpoint - 3 sloupce */
+@media (min-width: 769px) and (max-width: 1099px) {
+    .oprojektu-photos-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Mobile breakpoint - 1 sloupec */
 @media (max-width: 768px) {
     .oprojektu-photos-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .oprojektu-photos-grid img,
+    .oprojektu-photos-grid-two-columns img {
+        min-height: 120px; /* Menší minimální výška na mobilech */
+        max-height: 200px; /* Menší maximální výška na mobilech */
     }
 }
 
@@ -74,32 +99,7 @@
     .oprojektu-photos-grid img:nth-child(3) { grid-area: img3; }
     .oprojektu-photos-grid img:nth-child(4) { grid-area: img4; }
 }
-.oprojektu-photos-composed {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin: 1rem 0 1.5rem 0;
-}
-
-.oprojektu-photos-composed .column {
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 16px;
-}
-
-.oprojektu-photos-composed img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,.18);
-}
-
-@media (max-width: 768px) {
-    .oprojektu-photos-composed {
-        grid-template-columns: 1fr;
-    }
-}
+/* Duplicate styles removed - using the ones above */
 #quote-generator .spinner {
     width: 36px;
     height: 36px;
@@ -1488,14 +1488,27 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
 }
 
-@media (max-width: 992px) {
+/* Tablet breakpoint - 3 sloupce */
+@media (min-width: 769px) and (max-width: 991px) {
     .oprojektu-photos {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
     }
 }
+
+/* Small tablet breakpoint - 2 sloupce */
+@media (min-width: 577px) and (max-width: 768px) {
+    .oprojektu-photos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Mobile breakpoint - 1 sloupec */
 @media (max-width: 576px) {
     .oprojektu-photos {
         grid-template-columns: 1fr;
+        gap: 14px;
     }
 }
 
