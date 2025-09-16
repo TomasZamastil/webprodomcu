@@ -6,38 +6,36 @@
 }
 
 .oprojektu-photos-grid-two-columns {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 24px 24px !important;
-    margin: 1rem 0 1.5rem 0 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 24px;
+    margin: 1rem 0 1.5rem 0;
 }
 
-/* Responsive breakpoints for two-columns grid */
 @media (max-width: 768px) {
     .oprojektu-photos-grid-two-columns {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
     
     .oprojektu-photos-grid-two-columns img {
-        min-height: 120px; /* Menší minimální výška na mobilech */
-        max-height: 200px; /* Menší maximální výška na mobilech */
+        min-height: 120px;
+        max-height: 200px;
     }
 }
 
 .oprojektu-photos-grid img,
 .oprojektu-photos-grid-two-columns img {
     width: 100%;
-    height: auto; /* Automatická výška podle poměru stran */
-    min-height: 150px; /* Minimální výška */
-    max-height: 250px; /* Maximální výška */
-    object-fit: cover; /* Ořízne obrázek, aby vyplnil prostor */
+    height: auto;
+    min-height: 150px;
+    max-height: 250px;
+    object-fit: cover;
     display: block;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
 }
 
-/* two stacked columns layout */
 .oprojektu-photos-composed {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -62,7 +60,6 @@
     }
 }
 
-/* Tablet breakpoint - 3 sloupce */
 @media (min-width: 769px) and (max-width: 1099px) {
     .oprojektu-photos-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -70,7 +67,6 @@
     }
 }
 
-/* Mobile breakpoint - 1 sloupec */
 @media (max-width: 768px) {
     .oprojektu-photos-grid {
         grid-template-columns: 1fr;
@@ -79,12 +75,11 @@
     
     .oprojektu-photos-grid img,
     .oprojektu-photos-grid-two-columns img {
-        min-height: 120px; /* Menší minimální výška na mobilech */
-        max-height: 200px; /* Menší maximální výška na mobilech */
+        min-height: 120px;
+        max-height: 200px;
     }
 }
 
-/* Desktop placement for four photos on O Projektu */
 @media (min-width: 1100px) {
     .oprojektu-photos-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -99,7 +94,7 @@
     .oprojektu-photos-grid img:nth-child(3) { grid-area: img3; }
     .oprojektu-photos-grid img:nth-child(4) { grid-area: img4; }
 }
-/* Duplicate styles removed - using the ones above */
+
 #quote-generator .spinner {
     width: 36px;
     height: 36px;
@@ -112,7 +107,7 @@
 @keyframes spin { 
     to { transform: rotate(360deg); }
 }
-/* Theme variables */
+
 :root {
     --primary-color: #fae415;
     --secondary-color: #fae415;
@@ -127,21 +122,18 @@
     box-sizing: border-box;
 }
 
-/* Make all images responsive by default */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Force images on O projektu page to obey viewport width, override inline styles */
 .page-oprojektu img {
     width: 100%;
     height: auto;
     max-width: 100%;
 }
 
-/* Add more space above main heading on O projektu page */
 .page-oprojektu main h2:first-child {
     margin-top: 2rem;
 }
@@ -150,13 +142,12 @@ nav a:hover {
     color: #0066cc;
 }
 
-/* Responsive video embed */
 .video-embed {
     position: relative;
     width: 100%;
-    max-width: 500px; /* Omezíme maximální šířku videa */
+    max-width: 500px;
     aspect-ratio: 16 / 9;
-    margin: 0 auto 2rem auto; /* Přidáme spodní margin pro tlačítko */
+    margin: 0 auto 2rem auto;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
@@ -169,28 +160,25 @@ nav a:hover {
     border: 0;
 }
 
-/* Mobile-specific video adjustments */
 @media (max-width: 768px) {
     .video-embed {
-        max-width: 90%; /* Menší na tabletech */
+        max-width: 90%;
         margin: 0 auto 1.5rem auto;
-        border-radius: 8px;
+        border-radius: 12px;
     }
 }
 
-/* Very small screens - reduce video size */
 @media (max-width: 480px) {
     .video-embed {
-        max-width: 85%; /* Ještě menší na malých telefonech */
+        max-width: 85%;
         margin: 0 auto 1rem auto;
         aspect-ratio: 16 / 9;
     }
 }
 
-/* Extra small screens - ensure video fits */
 @media (max-width: 360px) {
     .video-embed {
-        max-width: 80%; /* Nejmenší na velmi malých obrazovkách */
+        max-width: 80%;
         margin: 0 auto 1rem auto;
     }
 }
@@ -209,15 +197,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-size: 17px; /* slightly larger base text */
+    font-size: 17px;
 }
 
-/* lock body scroll when mobile menu is open */
 body.menu-open {
     overflow: hidden;
 }
 
-/* Prevent any horizontal overflow and wrap long words/URLs */
 html, body, main {
     max-width: 100%;
 }
@@ -227,7 +213,6 @@ p, h1, h2, h3, h4, h5, h6, li, a, span, div {
     word-wrap: break-word;
 }
 
-/* header */
 header {
     background-color: black;
     position: static;
@@ -243,7 +228,6 @@ h3 {
     font-size: 1.2rem;
 }
 
-/* --- IKONY VLEVO U NADPISŮ --- */
 .icon-inline{
     display: flex;
     align-items: center;
@@ -263,7 +247,6 @@ h3 {
     line-height: 1.2;
 }
 
-/* text pod nadpisem zarovnaný podle textu, ne podle ikony */
 .icon-inline ~ p,
 .icon-inline ~ ul{
     margin-left: 44px;
@@ -284,7 +267,6 @@ h3 {
     padding: 0.8rem 1rem;
 }
 
-/* navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -297,7 +279,7 @@ nav a {
     text-decoration: none;
     padding: 0.5rem;
     transition: color 0.3s ease;
-    white-space: nowrap; /* keep labels on one line */
+    white-space: nowrap;
 }
 
 nav {
@@ -327,7 +309,6 @@ nav a:visited {
     margin-left: auto;
 }
 
-/* desktop navbar tightening to prevent wrapping due to larger font */
 @media (min-width: 769px) {
     nav ul {
         flex-wrap: nowrap;
@@ -339,30 +320,23 @@ nav a:visited {
     }
 }
 
-/* main */
 main {
     margin: 0 auto;
     max-width: 1200px;
-    flex: 1 0 auto; /* důležité pro sticky footer */
+    flex: 1 0 auto;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-/* kontakt */
 .contact-info {
     margin: 2rem 0;
     background-color: var(--background-color);
 }
 
-/* left-align content on contact page */
 body:has(.support-grid) main {
     margin: 0 auto;
     max-width: 1200px;
     text-align: left;
-}
-
-article {
-    margin-bottom: 2rem;
 }
 
 h2 {
@@ -380,7 +354,7 @@ p {
     max-width: 100%;
     display: flex;
     padding: 0;
-    margin-top: -6px; /* nudge up a few px to align with video */
+    margin-top: -6px;
     justify-content: center;
     align-items: flex-start;
 }
@@ -391,7 +365,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem; /* Zmenšíme gap mezi videem a tlačítkem */
+    gap: 2rem;
     width: 100%;
 }
 
@@ -446,7 +420,7 @@ p {
     font-size: 1.2rem;
     color: black;
     text-decoration: none;
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     display: flex;
@@ -459,16 +433,15 @@ p {
     transform: translateY(-3px);
 }
 
-/* prettier button for quote generator */
 #quote-generator .article-right .button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     padding: 0.85rem 1.4rem;
-    border-radius: 9999px;
+    border-radius: 12px;
     border: 2px solid rgba(0,0,0,0.08);
-    background: linear-gradient(180deg, #7fd6e0, #2aa9c3); /* shades of site blue */
+    background: linear-gradient(180deg, #7fd6e0, #2aa9c3);
     color: black;
     font-weight: 700;
     letter-spacing: 0.2px;
@@ -499,79 +472,12 @@ p {
     height: 100%;
 }
 
-/* features */
-.features {
-    margin: 4rem 0;
-    text-align: center;
-}
-
-.features ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.features li {
-    background-image: url(images/ui/utrženej\ papír\ copy.png);
-    background-repeat: no-repeat;
-    flex: 1;
-    padding: 3rem;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-}
-
-/* index courses*/
-.courses-preview {
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.course-cards {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    margin-top: 2rem;
-}
-
-.course-card {
-    flex: 1;
-    padding: 1.5rem;
-    border-radius: 16px;
-    background-color: var(--secondary-color);
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: black;
-    display: block;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.course-card:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-3px);
-}
-
-/* kurzy courses */
-.courses .hero {
-    text-align: center;
-}
-
-.courses .hero-buttons {
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-/* footer */
 footer {
     background-color: var(--primary-color);
     color: black;
     padding: 1rem;
     width: 100%;
-    margin-top: auto; /* sticky */
+    margin-top: auto;
 }
 
 .footer-content {
@@ -582,19 +488,17 @@ footer {
     align-items: center;
 }
 
-/* kontakt */
 .contact-info {
     margin: 2rem 0;
     background-color: var(--background-color);
 }
 
-/* support page layout */
 .support-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* main content + side image */
+    grid-template-columns: 2fr 1fr;
     gap: 24px;
     align-items: start;
-    margin-top: 2.5rem; /* push content further from navbar */
+    margin-top: 2.5rem;
 }
 
 .support-content img {
@@ -603,12 +507,12 @@ footer {
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
     display: block;
-    margin: 8px auto 0 auto; /* center under text */
+    margin: 8px auto 0 auto;
 }
 
 .support-side img {
     width: 100%;
-    max-width: 320px; /* slightly smaller */
+    max-width: 320px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
@@ -647,7 +551,7 @@ footer {
     padding: 1rem;
     background-color: var(--secondary-color);
     color: black;
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
@@ -665,33 +569,14 @@ footer {
     word-break: break-word;
 }
 
-select {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 8px;
-    font-family: 'Montserrat', Arial, sans-serif;
-    background-color: black;
-}
-
-optgroup {
-    font-weight: bold;
-    color: var(--text-color);
-}
-
-option {
-    padding: 0.5rem;
-}
-
-/* contact form */
 .contact-form {
     max-width: 600px;
-    margin: 3rem 0 !important;
+    margin: 3rem 0;
     padding: 2rem;
     background-color: var(--background-color);
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
-    text-align: left !important;
+    text-align: left;
 }
 
 .contact-form h2 {
@@ -715,7 +600,7 @@ option {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid var(--secondary-color);
-    border-radius: 8px;
+    border-radius: 12px;
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
@@ -731,7 +616,7 @@ option {
     background-color: var(--secondary-color);
     color: black;
     border: none;
-    border-radius: 16px;
+    border-radius: 12px;
     font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -743,7 +628,6 @@ option {
     transform: translateY(-3px);
 }
 
-/* clanky */
 .articles-list {
     max-width: 1200px;
     margin: 2rem auto;
@@ -763,154 +647,7 @@ option {
     padding: 1rem;
     background-color: var(--secondary-color);
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
-    border-radius: 16px;
-}
-
-.article-left {
-    flex: 1;
-    text-align: center;
-}
-
-.article-left img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-}
-
-.article-left .article-info {
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
-
-.article-right {
-    flex: 3;
-}
-
-.article-right h3 {
-    margin-bottom: 1rem;
-    color: var(--text-color);
-}
-
-.article-right p {
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-}
-
-/* o nas */
-.team {
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.team h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-.team-members {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.team-member {
-    flex: 1;
-    max-width: 300px;
-    padding: 2rem;
-    background-color: var(--secondary-color);
-    border-radius: 16px;
-    color: black;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.team-member svg {
-    margin-bottom: 1rem;
-}
-
-.team-member h3 {
-    margin-bottom: 0.5rem;
-}
-
-/* galerie */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    background-color: var(--secondary-color);
-    border-radius: 16px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.gallery-item p {
-    color: black;
-    padding: 1rem;
-    margin: 0;
-    text-align: center;
-}
-
-/* modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 90vh;
-    margin-top: 2rem;
-}
-
-.close {
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
-    color: black;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-#modalCaption {
-    text-align: center;
-    color: black;
-    padding: 1rem;
-}
-
-.pozadi-rozcestnik {
-    background-image: url("images/ui/utrženej papír copy.png");
-    min-width: 100%;
-    min-height: 100%;
+    border-radius: 12px;
 }
 
 .hlavni_nadpis {
@@ -923,7 +660,7 @@ option {
 .yellow-box {
     background-color: var(--secondary-color);
     color: black;
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3);
     padding: 1rem 1.25rem;
     display: block;
@@ -934,7 +671,6 @@ option {
     box-sizing: border-box;
 }
 
-/* mobile */
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -947,7 +683,7 @@ option {
     nav.active ul {
         display: flex;
         position: fixed;
-        top: 0; /* JS sets exact offset on open */
+        top: 0;
         left: 0;
         right: 0;
         width: 100vw;
@@ -974,10 +710,6 @@ option {
         padding: 0.5rem 1rem;
     }
 
-    .features ul {
-        flex-direction: column;
-    }
-
     .hero-container {
         flex-direction: column;
         text-align: center;
@@ -991,30 +723,6 @@ option {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
-    }
-
-    .course-cards {
-        flex-direction: column;
-    }
-    
-    .course-card {
-        margin-bottom: 1rem;
-    }
-
-    .courses .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        padding: 0 1rem;
-    }
-
-    .courses .hero-buttons .button {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .courses .hero {
-        padding: 1rem;
-        text-align: center;
     }
 
     .contact-details {
@@ -1033,20 +741,6 @@ option {
         margin: 2rem 1rem;
     }
 
-    .team-members {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .team-member {
-        width: 100%;
-    }
-    
-    .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        padding: 1rem;
-    }
-
     .icon-inline + p,
     .icon-inline + ul{
         margin-left: 36px;
@@ -1057,7 +751,6 @@ option {
     }
 }
 
-/* Earlier breakpoint for video responsiveness */
 @media (max-width: 1200px) {
     .hero-superclass{
         grid-template-columns: 1fr;
@@ -1065,8 +758,6 @@ option {
     }
 }
 
-/* Responsive breakpoints - Mobile First approach */
-/* Extra small devices (phones, 576px and down) */
 @media (max-width: 575.98px) {
     .header-content {
         padding: 0.5rem;
@@ -1103,7 +794,6 @@ option {
     }
 }
 
-/* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .header-content {
         padding: 0.8rem;
@@ -1118,7 +808,6 @@ option {
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .hero-superclass {
         gap: 3rem;
@@ -1129,21 +818,18 @@ option {
     }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .hero-superclass {
         gap: 3.5rem;
     }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .hero-superclass {
         gap: 4rem;
     }
 }
 
-/* High DPI displays */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .tile img {
         image-rendering: -webkit-optimize-contrast;
@@ -1151,7 +837,6 @@ option {
     }
 }
 
-/* Print styles */
 @media print {
     .header, .footer, .hamburger, .invisible-watermark {
         display: none;
@@ -1168,16 +853,14 @@ option {
     }
 }
 
-/* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
     }
 }
 
-/* Landscape orientation adjustments */
 @media (orientation: landscape) and (max-height: 500px) {
     .header-content {
         padding: 0.5rem;
@@ -1192,7 +875,6 @@ option {
     }
 }
 
-/* Základní reset/utility */
 * {
     box-sizing: border-box;
 }
@@ -1205,45 +887,33 @@ body {
     overflow-x: hidden;
 }
 .wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px;
-  width: 100%;
-  box-sizing: border-box;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
-/* GRID */
+
 .rozcestnik-gallery {
   display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(2, 1fr); /* default: 2 sloupce pro lepší fit */
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
   max-width: 100%;
   width: 100%;
+  height: auto;
   box-sizing: border-box;
 }
 
-/* Velké monitory – 3 sloupce (3x2) */
 @media (min-width: 1200px) {
   .rozcestnik-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Střední displeje – 2 sloupce (2x3) */
 @media (max-width: 1199px) {
   .rozcestnik-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Nejmenší displeje – 1 sloupec (1x6) */
-@media (max-width: 576px) {
-  .rozcestnik-gallery {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Karty/obrázky */
 .tile {
   position: relative;
   display: block;
@@ -1261,7 +931,6 @@ body {
   box-shadow: 0 6px 24px rgba(0,0,0,.12);
 }
 
-/* widen yellow border and keep original image ratio in tiles */
 .tile {
   background-color: var(--secondary-color);
   padding: 16px 16px 20px;
@@ -1276,7 +945,6 @@ body {
   object-fit: contain;
 }
 
-/* rounded corners for tile images */
 .tile img {
   border-radius: 12px;
 }
@@ -1284,13 +952,12 @@ body {
   border-radius: 12px;
 }
 
-/* Popisek přes obrázek (volitelné) */
 .caption {
   position: absolute;
   left: 8px;
   bottom: 8px;
   padding: 6px 10px;
-  border-radius: 8px;
+  border-radius: 12px;
   background: rgba(0,0,0,.55);
   color: #fff;
   font-size: 14px;
@@ -1298,99 +965,15 @@ body {
   letter-spacing: .2px;
 }
 
-
-.ui-wheel-of-fortune {
-    padding: 4rem;       /* přidá volný prostor okolo kola */
-    background-color: transparent; /* můžeš přidat i barvu, pokud chceš */
-    box-sizing: border-box;
-  }
-
-/* === Wheel of Fortune === */
-:where(.ui-wheel-of-fortune) {
-    --_items: 12;
-    all: unset;
-    aspect-ratio: 1 / 1;
-    direction: ltr;
-    display: grid;
-    position: relative;
-    width: 100%;
-}
-
-:where(.ui-wheel-of-fortune)::after {
-    aspect-ratio: 1.154700538;
-    background-color: crimson;
-    clip-path: polygon(50% 100%, 100% 0, 0 0);
-    content: "";
-    height: 4cqi;
-    position: absolute;
-    place-self: start center;
-    transform: scale(1.4);
-}
-
-:where(.ui-wheel-of-fortune) > * {
-    position: absolute;
-}
-
-:where(.ui-wheel-of-fortune) button {
-    aspect-ratio: 1 / 1;
-    background: hsla(0, 0%, 100%, .8);
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 5cqi;
-    place-self: center;
-    width: 20cqi;
-}
-
-:where(.ui-wheel-of-fortune) ul {
-    all: unset;
-    clip-path: inset(0 0 0 0 round 50%);
-    display: grid;
-    inset: 0;
-    place-content: center start;
-}
-
-:where(.ui-wheel-of-fortune) ul li {
-    align-content: center;
-    aspect-ratio: 1.866025404;
-    background: hsl(calc(360deg / var(--_items) * var(--_idx)), 100%, 75%);
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-    display: grid;
-    font-size: 5cqi;
-    grid-area: 1 / -1;
-    padding-left: 1ch;
-    rotate: calc(360deg / var(--_items) * (var(--_idx) - 1));
-    transform-origin: center right;
-    user-select: none;
-    width: 50cqi;
-}
-
-/* index variables for each slice */
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(1)  { --_idx: 1; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(2)  { --_idx: 2; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(3)  { --_idx: 3; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(4)  { --_idx: 4; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(5)  { --_idx: 5; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(6)  { --_idx: 6; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(7)  { --_idx: 7; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(8)  { --_idx: 8; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(9)  { --_idx: 9; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(10) { --_idx: 10; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(11) { --_idx: 11; }
-:where(.ui-wheel-of-fortune) ul li:nth-of-type(12) { --_idx: 12; }
-
-/* spacing before Rozcestník on homepage */
 .rozcestnik-section {
-    margin-top: 3rem; /* reduce gap above Rozcestník */
-    margin-bottom: 4rem; /* add breathing room above footer */
+    margin-top: 3rem;
+    margin-bottom: 4rem;
 }
 
-/* center Rozcestník heading */
 .rozcestnik-section h2 {
     text-align: center;
 }
 
-/* tile variant with centered text */
 .tile-with-text {
   position: relative;
   display: flex;
@@ -1408,7 +991,7 @@ body {
   box-shadow: 0 2px 12px rgba(0,0,0,.05);
   background-color: var(--secondary-color);
   min-height: 200px;
-  max-height: 250px;
+  max-height: 100%;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -1416,24 +999,23 @@ body {
 .tile-with-text img {
   width: 100%;
   height: auto;
-  max-height: 120px;
+  max-height: 100%;
   aspect-ratio: auto;
   object-fit: contain;
-  border-radius: 12px !important;
+  border-radius: 12px;
   box-sizing: border-box;
   max-width: 100%;
 }
 
 .rozcestnik-gallery .tile-with-text img {
-  border-radius: 20px !important;
-  object-fit: cover !important;
-  overflow: hidden !important;
+  border-radius: 12px;
+  object-fit: cover;
+  overflow: hidden;
 }
 .tile-with-text h2 {
   margin: 4px 8px 0 8px;
-  font-size: 0.9rem;
+  font-size: 1.0em;
   line-height: 1.1;
-  font-weight: 600;
   overflow-wrap: anywhere;
   word-break: break-word;
   width: 100%;
@@ -1455,7 +1037,6 @@ body {
   box-sizing: border-box;
 }
 
-/* invisible big text that shows only on selection */
 .invisible-watermark {
     user-select: text;
     font-size: clamp(64px, 12vw, 220px);
@@ -1472,7 +1053,6 @@ body {
     color: black;
 }
 
-/* scoped styles for photos on O projektu page */
 .oprojektu-photos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1488,7 +1068,6 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,.18);
 }
 
-/* Tablet breakpoint - 3 sloupce */
 @media (min-width: 769px) and (max-width: 991px) {
     .oprojektu-photos {
         grid-template-columns: repeat(3, 1fr);
@@ -1496,7 +1075,6 @@ body {
     }
 }
 
-/* Small tablet breakpoint - 2 sloupce */
 @media (min-width: 577px) and (max-width: 768px) {
     .oprojektu-photos {
         grid-template-columns: repeat(2, 1fr);
@@ -1504,7 +1082,6 @@ body {
     }
 }
 
-/* Mobile breakpoint - 1 sloupec */
 @media (max-width: 576px) {
     .oprojektu-photos {
         grid-template-columns: 1fr;
@@ -1512,11 +1089,6 @@ body {
     }
 }
 
-/* remove composed variants (not used) */
-
-/* Responsive YouTube video - now handled by .video-embed class */
-
-/* center top text on slova page */
 #quote-generator > h2 {
     text-align: center;
 }
@@ -1525,31 +1097,22 @@ body {
     text-align: left;
 }
 
-/* Center text under "PŘIJDE ČAS" heading */
 .center-text {
     text-align: center;
 }
 
-/* Only the first heading left-aligned */
 #quote-generator > h2:first-of-type {
     text-align: left;
 }
 
-/* Narrow only the intro text block on Slova page */
-/* (reverted) */
-
-
-/* add extra space before subsequent section headings on slova page */
 #quote-generator > h2:not(:first-of-type) {
     margin-top: 7rem;
 }
 
-/* remove bottom margin from headings on slova page */
 #quote-generator > h2 {
     margin-bottom: 0;
 }
 
-/* videos grid on slova page */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1561,8 +1124,8 @@ body {
 
 .videos-grid iframe {
     width: 100%;
-    height: 200px;
-    border-radius: 8px;
+    height: 350px;
+    border-radius: 12px;
 }
 
 @media (max-width: 768px) {
@@ -1577,7 +1140,7 @@ body {
     .videos-grid iframe {
         width: 100%;
         max-width: 100%;
-        height: 180px;
+        height: 350px;
     }
 }
 
@@ -1598,26 +1161,16 @@ body {
   }
 }
 
-/* Prevent horizontal scrolling and ensure all grids stay within viewport */
 body {
     overflow-x: hidden;
 }
 
-/* Ensure all grids respect viewport width */
-.grid, .gallery, .photos-grid, .videos-grid, .oprojektu-photos-grid, .oprojektu-photos-grid-two-columns {
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-/* Ensure main content stays within viewport */
 main {
     max-width: 100vw;
     overflow-x: hidden;
     box-sizing: border-box;
 }
 
-/* Fix layout at extreme zoom levels - when viewport becomes very narrow */
 @media (max-width: 300px) {
     main {
         padding: 0;
@@ -1655,14 +1208,13 @@ main {
     }
 }
 
-/* Force rounded corners for rozcestnik images */
 .rozcestnik-img {
-    border-radius: 20px !important;
+    border-radius: 6px;
 }
 
 .rozcestnik-gallery .tile-with-text .rozcestnik-img {
-    border-radius: 20px !important;
-    overflow: hidden !important;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 main {
