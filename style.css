@@ -178,7 +178,7 @@ nav a:hover {
 
 @media (max-width: 360px) {
     .video-embed {
-        max-width: 80%;
+        max-width: 90%;
         margin: 0 auto 1rem auto;
     }
 }
