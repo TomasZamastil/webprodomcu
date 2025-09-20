@@ -189,16 +189,7 @@ html, body {
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-size: 17px;
-}
+
 
 body.menu-open {
     overflow: hidden;
@@ -885,7 +876,13 @@ body {
     line-height: 1.5;
     color: #111;
     overflow-x: hidden;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 17px; /* tohle tady musí zůstat */
 }
+
 .wrapper {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -913,6 +910,12 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 709px) {
+    .rozcestnik-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 
 .tile {
   position: relative;
@@ -1213,13 +1216,13 @@ main {
     }
     
     .tile-with-text h2 {
-        font-size: 0.6rem;
+        font-size: 1em;
         margin: 2px 4px 0 4px;
         line-height: 1.0;
     }
     
     .tile-with-text p {
-        font-size: 0.6rem;
+        font-size: 1em;
         margin: 0 4px;
     }
 }
